@@ -81,49 +81,49 @@ export default class UserFacade {
     }
 }
 
-async function test() {
-    console.log("testing")
-    const client = await setup();
-    await UserFacade.setDatabase(client)
-    await userCollection.deleteMany({})
-    await UserFacade.addUser({ name: "kim", userName: "kim@b.dk", password: "secret", role: "user" })
-    await UserFacade.addUser({ name: "ole", userName: "ole@b.dk", password: "secret", role: "user" })
+// async function test() {
+//     console.log("testing")
+//     const client = await setup();
+//     await UserFacade.setDatabase(client)
+//     //await userCollection.deleteMany({})
+//     await UserFacade.addUser({ name: "kim", userName: "kim@b.dk", password: "secret", role: "user" })
+//     await UserFacade.addUser({ name: "ole", userName: "ole@b.dk", password: "secret", role: "user" })
     
-    // const all = await UserFacade.getAllUsers();
-    // console.log(all)
+//     const all = await UserFacade.getAllUsers();
+//     console.log(all)
 
-    // const projection = {projection:{_id:0, role:0,password:0}}
-    // const kim = await UserFacade.getUser("kim@b.dk",projection)
-    // console.log(kim)
+//     const projection = {projection:{_id:0, role:0,password:0}}
+//     const kim = await UserFacade.getUser("kim@b.dk",projection)
+//     console.log(kim)
 
-    // try {
-    //     let status = await UserFacade.deleteUser("kim@b.dk");
-    //     console.log(status)
-    //     status = await UserFacade.deleteUser("xxxx@b.dk");
-    //     console.log("Should not get here")
-    // } catch (err) {
-    //     console.log(err.message)
-    // }
+//     try {
+//         let status = await UserFacade.deleteUser("kim@b.dk");
+//         console.log(status)
+//         status = await UserFacade.deleteUser("xxxx@b.dk");
+//         console.log("Should not get here")
+//     } catch (err) {
+//         console.log(err.message)
+//     }
 
-    // try {
-    //     const passwordStatus = await UserFacade.checkUser("kim@b.dk", "secret");
-    //     console.log("Expects true: ", passwordStatus)
-    // } catch (err) {
-    //     console.log("Should not get here 1", err)
-    // }
-    // try {
-    //     const passwordStatus = await UserFacade.checkUser("kim@b.dk", "xxxx");
-    //     console.log("Should not get here ", passwordStatus)
-    // } catch (err) {
-    //     console.log("Should get here with failded 2", err)
-    // }
-    // try {
-    //     const passwordStatus = await UserFacade.checkUser("xxxx@b.dk", "secret");
-    //     console.log("Should not get here")
-    // } catch (err) {
-    //     console.log("hould get here with failded 2", err)
-    // }
+//     try {
+//         const passwordStatus = await UserFacade.checkUser("kim@b.dk", "secret");
+//         console.log("Expects true: ", passwordStatus)
+//     } catch (err) {
+//         console.log("Should not get here 1", err)
+//     }
+//     try {
+//         const passwordStatus = await UserFacade.checkUser("kim@b.dk", "xxxx");
+//         console.log("Should not get here ", passwordStatus)
+//     } catch (err) {
+//         console.log("Should get here with failded 2", err)
+//     }
+//     try {
+//         const passwordStatus = await UserFacade.checkUser("xxxx@b.dk", "secret");
+//         console.log("Should not get here")
+//     } catch (err) {
+//         console.log("hould get here with failded 2", err)
+//     }
 
     
-}
-//test();
+// }
+// test();
